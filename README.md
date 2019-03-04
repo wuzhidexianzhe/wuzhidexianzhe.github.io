@@ -1,5 +1,5 @@
-# wuzhidexianzhe.github.io
-个人博客
+
+                                                                 #个人博客
  
  
-<a href="http://wuzhidexianzhe.github.io/测试"> 页面跳转测试</a>
+<a href="https://github.com/wuzhidexianzhe/wuzhidexianzhe.github.io/blob/master/java.html"> Java</a>
