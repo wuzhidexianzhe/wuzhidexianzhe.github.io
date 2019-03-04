@@ -1,0 +1,38 @@
+java内有几个相当重要的集合，分别是List,Map,Set。
+Java给它们提供了相应的API。
+那么在学他们之前，我们先来理解下什么是Collection和Map接口吧。
+Collection是List，Set的上级接口。换个说法，List和Set是Collection的具体实现。
+这意味着什么呢？这以为这我们只需要掌握API文档中Collection的方法，就想相当于掌握了List和Set的大量共有的方法。
+这样我们就只需要在了解些两个实现类的特殊方法就相当于能够使用这两种方法了。
+因此虽然很多时候别人常常把Map和Set放在一起说，但我更喜欢把List和Set放在一起理解。
+
+List与Set：
+====
+List与Set都是线性结构，但是它们是不同的。
+1：List可以允许重复对象。                                         1：Set不允许重复的对象
+2：List可以插入多个NULL元素。                                     2：Set只允许插入一个Null元素
+3：List是一个有序容器，所谓有序是指插入时的顺序就是其输出时的顺序。   3：Set是无序的，你无法保证每个元素的存储顺序。TreeSet通过 Comparator  或者 Comparable 维护了一个排序顺序。
+List与Set的实现类：
+-------
+List：List常见的实现类包括ArrayList、LinkedList和Vector。其中ArrayList是最为流行的，从名字可以看出其底层是依靠数组实现的，因此通过索引可以对其进行随意访问,
+而LinkedList则很明显是使用链表实现的，因此更适合添加和删除元素。
+
+Set：Set最流行的实现类是HashSet、LinkedHashSet以及TreeSet。最流行的是基于HashMap（见Ps：1）实现的HashSet；TreeSet还实现了SortedSet接口，因此TreeSet
+是一个根据其compare（）和compareto（）的定义进行排序的有序容器。
+
+
+
+
+Map
+====
+Map是一个键值对的映射。一个映射不能包含重复的键，每个键最多只能映射一个值。
+1：Map不是collection的实现类或者子接口。Map本身是一个接口，可Collection同级。
+2：Map的每个实体对象内都包含两个对象，既'键'和'值'。Map可以有相同的'值'但'键'绝对不能相同。
+3：TreeMap也通过comparator或者comparable维护了一个排序顺序。
+4：Map里你可以拥有随意个NULL的'值'，但最多拥有一个NULL的'键'。
+5.Map 接口最流行的几个实现类是 HashMap、LinkedHashMap、[Hashtable]("对这个暂时不了解，日后搞懂！") 和 TreeMap。（HashMap、TreeMap最常用）
+
+
+
+PS：1  HashMap和HashSet都是基于散列表来实现的。所谓散列表，就是通过数组和链表来进行存储的数据结构。
+散列表可以通过数组来存储关键字，通过关键字来进行索引。而相应的关键字后面则使用链表来进行存储具体数据。
